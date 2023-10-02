@@ -4,16 +4,20 @@ import { useState, useEffect } from "react";
 
 
 
-const ApiTest = () => {
+const ApiTest = ({amount}) => {
+      
+
   const [papi, setPublic] = useState("");
     useEffect(() => {
         //fetch("https://cat-fact.herokuapp.com/facts")
         
-      fetch("http://localhost:9000/publicAPI")
+
+      const url = `http://localhost:9000/publicAPI`
+      fetch(url  )
       .then(response => response.json() )
       .then(json => {setPublic(json)})
       .catch(error => console.error(error))
-      }, []
+      } , []
       );
       return (
         <div>

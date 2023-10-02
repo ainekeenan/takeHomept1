@@ -26,6 +26,7 @@ const App = () => {
   const [data, setData] = useState("");
   const [papi, setPublic] = useState("");
  // to set with input form later const [amount, setAmount] = useState("");
+ const amountvar = 2;
 
  //const amount = 3;
   function handleClick () {
@@ -86,7 +87,7 @@ const App = () => {
       <Route  path="/cats" element={<File />}></Route>
       <Route  path="/" element={<NamedExport />}></Route>
       <Route path = "/form" element= {<Form index = {index} handleClick={handleClick}/>}></Route>
-      <Route path = "/publicAPI" element = { <ApiTest />}></Route>
+      <Route path = "/publicAPI" element = { <ApiTest amount={amountvar} />}></Route>
     </Routes>
    </Router>
   
